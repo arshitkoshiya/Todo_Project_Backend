@@ -11,3 +11,4 @@ module.exports.generateOTP = () => {
 //   upperCaseAlphabets: true,
 //   specialChars: false,
 // }
+
