@@ -60,7 +60,6 @@ router.post("/Country", async (req, res) => {
 // DELETE Country
 router.delete("/Country", async (req, res) => {
     try {
-        console.log(req.body.PKId)
         const PKId = req.body.PKId
         const check = await sql.query(`select * from country where PKId ='${PKId}' `)
         if (check.recordset.length >= 1) {

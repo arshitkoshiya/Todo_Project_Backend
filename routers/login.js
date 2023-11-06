@@ -65,9 +65,11 @@ router.post('/', async (req, res) => {
                         result: 'Success',
                         message: 'Authentication successful. Welcome!',
                         data: {
+                            userId: user.userId,
                             token: token,
                             username: user.username,
-                            createdOn: createdOn
+                            createdOn: createdOn,
+                            color: user.color
                         }
                     });
                 } else {

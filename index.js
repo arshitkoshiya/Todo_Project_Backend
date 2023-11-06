@@ -9,6 +9,8 @@ const signupApi = require('./routers/signUp')
 const otpApi = require('./routers/otp') 
 const forgotapi = require('./routers/forgot') 
 const checkUser = require('./routers/checkUser') 
+const tasks = require('./routers/tasks')
+const users = require('./routers/users')
 const dbConnection = require('./db')
 const cors = require('cors');
 
@@ -23,6 +25,8 @@ app.use('/signup',signupApi)
 app.use('/otp',otpApi)
 app.use('/forgot',forgotapi)
 app.use('/checkUser',checkUser)
+app.use('/tasks',tasks)
+app.use('/users',users)
 
 app.listen(port,()=>{
     console.log('app Listening on port '+port)
